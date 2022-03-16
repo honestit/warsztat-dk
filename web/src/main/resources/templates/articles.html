@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warsztaty Java dla początkujących</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+<section class="section is-primary">
+    <div class="container">
+        <h1 class="title">
+            Warsztaty Java dla początkujących - 16 marca 2022, godz. 18:00
+        </h1>
+        <p class="subtitle">
+            Drogowskazy kariery PW
+        </p>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile" th:each="article : ${articlesGroup1}">
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-info">
+                        <p class="title" th:text="${article.title}">Wojna Rosji z Ukrainą. Dzień 21</p>
+                        <p class="subtitle"><a th:href="@{${article.url}}"
+                                href="https://rp.pl/swiat/art35871261-wojna-rosji-z-ukraina-dzien-21"
+                                target="_blank">Więcej</a></p>
+                        <div class="content" th:text="${article.content}">
+                            24 lutego Rosja rozpoczęła inwazję na Ukrainę. We wtorek wieczorem, w
+                            Kijowie, Jarosław Kaczyński wezwał do wysłania na Ukrainę misji
+                            pokojowej NATO.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile" th:each="article : ${articlesGroup2}">
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-info">
+                        <p class="title" th:text="${article.title}">Wojna Rosji z Ukrainą. Dzień 21</p>
+                        <p class="subtitle"><a th:href="@{${article.url}}"
+                                href="https://rp.pl/swiat/art35871261-wojna-rosji-z-ukraina-dzien-21"
+                                target="_blank">Więcej</a></p>
+                        <div class="content" th:text="${article.content}">
+                            24 lutego Rosja rozpoczęła inwazję na Ukrainę. We wtorek wieczorem, w
+                            Kijowie, Jarosław Kaczyński wezwał do wysłania na Ukrainę misji
+                            pokojowej NATO.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
